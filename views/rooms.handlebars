@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 class="my-4 text-center">Book Your Room Now!</h2>
+  <form action="/charge" method="post" id="payment-form">
+    <div class="form-row">
+      <input type="text" name="first_name" id="firstName" class="form-control mb-3 StripeElement StripeElement--empty"
+        placeholder="First Name">
+      <input type="text" name="last_name" id="lastName" class="form-control mb-3 StripeElement StripeElement--empty"
+        placeholder="Last Name">
+      <input type="email" name="email" id="email" class="form-control mb-3 StripeElement StripeElement--empty"
+        placeholder="Email Address">
+      <div id="card-element" class="form-control">
+        <!-- a Stripe Element will be inserted here. -->
+      </div>
+      <!-- Used to display form errors -->
+      <div id="card-errors" role="alert"></div>
+    </div>
+    <button class="submit">Submit Payment</button>
+
+  </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/app.js"></script>
